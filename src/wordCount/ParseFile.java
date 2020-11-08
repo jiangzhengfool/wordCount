@@ -1,5 +1,6 @@
 package wordCount;
 
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Scanner;
 import java.util.regex.Pattern;
@@ -7,7 +8,7 @@ import java.util.regex.Pattern;
 
 public class ParseFile {
 
-    public static HashMap<String, Integer> getFreq(String input, HashMap<String, String> dictMap) {
+    public static HashMap<String, Integer> getFreq(String input, HashMap<String, String> dictMap) throws IOException {
         HashMap<String, Integer> freqMap = new HashMap<>();
         String regEx="[`~!@#$%^&*()_\\-+=|{}':;',\\[\\].<>/?~！@#￥%……&*（）——+|{}【】‘；：”“’。，、？[\"][0-9]]";
 

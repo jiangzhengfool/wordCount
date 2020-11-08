@@ -6,7 +6,7 @@ import java.util.Map;
 import  com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.serializer.SerializerFeature;
 
-public class MainClass {
+public class Main {
 
     private final static String dict = "txt/2-2-3lem.txt";
     private final static String input_txt = "txt/input.txt";
@@ -17,7 +17,7 @@ public class MainClass {
     public static void main(String args[]) throws IOException {
 
         HashMap<String, String> dictMap = Dict.readDict(dict);
-        String inPut = ReadFile.read(input_txt);
+        String inPut = FileIO.read(input_txt);
         HashMap<String, Integer> freqMap = ParseFile.getFreq(inPut, dictMap);
         Map<String, Integer> sortMap=SortMap.sortMap(freqMap);
         Map<String, Integer> resMap = new HashMap<>();
